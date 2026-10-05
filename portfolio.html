@@ -1,0 +1,11 @@
+---
+layout: page
+title: Portfolio
+permalink: /portfolio/
+eyebrow: Selected work
+intro: Studio and professional projects spanning commercial and residential interiors, from concept and material selection through drawings and renderings.
+---
+<div class="grid">
+  {% assign projects = site.projects | sort: "order" %}
+  {% for project in projects %}{% include project-card.html project=project %}{% endfor %}
+</div>
