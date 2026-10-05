@@ -1,0 +1,41 @@
+---
+layout: default
+description: Alli Middleton is an interior designer in Raleigh, NC, creating calm, nature-inspired spaces.
+---
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <p class="eyebrow">Interior Design · Raleigh, NC</p>
+      <h1>Spaces that bring the <em>outside in.</em></h1>
+      <p class="lede">I'm Alli Middleton, an interior designer finishing my BS at Meredith College, with studio and internship experience across commercial and residential work.</p>
+      <div class="actions">
+        <a class="button" href="{{ '/portfolio/' | relative_url }}">View portfolio</a>
+        <a class="button ghost" href="{{ '/contact/' | relative_url }}">Get in touch</a>
+      </div>
+    </div>
+    <div class="hero-mark"><img src="{{ '/assets/img/logo.png' | relative_url }}" alt="Alli Rose Design monogram"></div>
+  </div>
+</section>
+
+<section class="wrap">
+  <div class="section-head">
+    <h2>Selected work</h2>
+    <a href="{{ '/portfolio/' | relative_url }}">All projects &rarr;</a>
+  </div>
+  <div class="grid">
+    {% assign featured = site.projects | sort: "order" %}
+    {% for project in featured limit: 3 %}{% include project-card.html project=project %}{% endfor %}
+  </div>
+</section>
+
+<section class="statement">
+  <div class="wrap">
+    <p>&ldquo;I believe I will always have an underlying goal of bringing the outside in, due to the healthy energy that nature brings to a space.&rdquo;</p>
+  </div>
+</section>
+
+<section class="wrap" style="text-align:center">
+  <h2>Let's work together</h2>
+  <p class="lede" style="margin:0 auto 28px">I graduate in December 2026 and I'm looking for my first interior design role.</p>
+  <a class="button" href="{{ '/resume/' | relative_url }}">View resume</a>
+</section>

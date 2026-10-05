@@ -1,0 +1,11 @@
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <img src="{{ '/assets/img/logo.png' | relative_url }}" alt="" width="44" height="34">
+    <p class="footer-links">
+      <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      {% if site.linkedin != "" %}<span aria-hidden="true">·</span> <a href="{{ site.linkedin }}">LinkedIn</a>{% endif %}
+      <span aria-hidden="true">·</span> {{ site.location }}
+    </p>
+    <p class="fine">&copy; {{ site.time | date: "%Y" }} {{ site.author }}</p>
+  </div>
+</footer>

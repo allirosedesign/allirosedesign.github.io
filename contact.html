@@ -1,0 +1,19 @@
+---
+layout: page
+title: Contact
+permalink: /contact/
+eyebrow: Get in touch
+intro: I'd love to hear about opportunities, collaborations or just talk design. Email is the best way to reach me.
+---
+<div class="contact-grid">
+  <ul class="contact-list">
+    <li><span>Email</span><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+    {% if site.linkedin != "" %}<li><span>LinkedIn</span><a href="{{ site.linkedin }}">View my profile</a></li>{% endif %}
+    <li><span>Based in</span><strong>{{ site.location }}</strong></li>
+  </ul>
+  <div>
+    <p>Looking for a junior interior designer? My resume is available to view online or download as a PDF.</p>
+    <p><a class="button" href="mailto:{{ site.email }}?subject=Hello%20from%20your%20portfolio">Send an email</a></p>
+    <p><a href="{{ '/resume/' | relative_url }}">View resume &rarr;</a></p>
+  </div>
+</div>

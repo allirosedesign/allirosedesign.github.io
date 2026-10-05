@@ -1,0 +1,19 @@
+---
+layout: page
+title: Journal
+permalink: /journal/
+eyebrow: Notes &amp; inspiration
+intro: Site visits, travel, sketches and the spaces that inspire me.
+narrow: true
+---
+<ul class="post-list">
+  {% for post in site.posts %}
+  <li>
+    <a href="{{ post.url | relative_url }}">
+      <p class="eyebrow">{{ post.date | date: "%B %-d, %Y" }}</p>
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.excerpt | strip_html | truncatewords: 30 }}</p>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

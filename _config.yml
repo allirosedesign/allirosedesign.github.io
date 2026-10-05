@@ -1,0 +1,26 @@
+title: Alli Rose Design
+author: Alli Middleton
+tagline: Interior Designer
+description: Portfolio of Alli Middleton, interior designer based in Raleigh, North Carolina.
+location: Raleigh, NC
+email: middleton.alli@gmail.com
+# Add your LinkedIn profile URL here and the link appears in the footer and Contact page.
+linkedin: ""
+url: "https://allirosedesign.github.io"
+baseurl: ""
+
+permalink: /journal/:year/:month/:title/
+
+collections:
+  projects:
+    output: true
+    permalink: /portfolio/:name/
+
+defaults:
+  - scope: { path: "", type: projects }
+    values: { layout: project }
+  - scope: { path: "", type: posts }
+    values: { layout: post }
+
+exclude:
+  - README.md

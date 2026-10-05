@@ -1,0 +1,6 @@
+{% assign p = include.project %}
+<a class="card" href="{{ p.url | relative_url }}">
+  <div class="media">{% if p.cover %}<img src="{{ p.cover | relative_url }}" alt="{{ p.title }}" loading="lazy">{% else %}{% include placeholder.html label="Project image" %}{% endif %}</div>
+  <h3>{{ p.title }}</h3>
+  <p class="meta">{{ p.category }}</p>
+</a>
